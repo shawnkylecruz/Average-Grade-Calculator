@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> Grade Calculator </title>
+    <link rel="stylesheet" type="text/css" href="./css files/exam.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-box">
+            <h1 style='padding-top: 100px'>Student Grades</h1>
+            </br>
+            <h1 class="average-grade hide" id="viewAverageGrade" onchange='setTwoNumberDecimal'></h2>
+            <div class="p-g-t">
+                <table>
+                    <tr>
+                        <td>
+                            <table class="list" id="studentsList">
+                                <thead>
+                                    <tr>
+                                        <th>Full Name</th>
+                                        <th>Grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+            
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="content" style='padding-top: 80px'>
+            <div class="right-box">
+                <table>
+                    <tr>
+                        <td>
+                            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                                <div>
+                                    <label class="validation-error hide" id="nameValidationError">This field is required and does not accept number and special characters</label>
+                                    </br>
+                                    <label>Full Name*</label><input type="text" name="fullName" id="fullName">
+                                    </br>
+                                </div>
+                                <div>
+                                    <label class="validation-error hide" id="gradeValidationError">Please input grade between 0 to 100.</label>
+                                    </br>
+                                    <label>Grade</label><input type="number" name="grade" id="grade">
+                                    </br>
+                                </div>
+                                <div>
+                                    <input type="submit" id="myButtons" value="Submit">
+                                </div>
+                                <div>
+                                    <label class="average-grade hide" id="viewAverageGrade"></label>
+                                </div>
+                            </form>
+                            <form onsubmit="event.preventDefault();onShowFinalAverage();" autocomplete="off">
+                                <div>
+                                    <input type="submit" id="myButtons" value="Show Final Average">
+                                </div>
+                            </form>
+                            <form onsubmit="event.preventDefault();onClearTable();" autocomplete="off">
+                                <div>
+                                    <input type="submit" id="myButtons" value="Clear Table">
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
